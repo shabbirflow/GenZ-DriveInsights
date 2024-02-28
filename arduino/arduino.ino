@@ -1,5 +1,5 @@
 #include <DS3231.h>
-// #include <DFRobot_sim808.h>
+#include <DFRobot_SIM808.h>
 #include <SoftwareSerial.h>
 #include <SD.h>
 #include "ELMduino.h"
@@ -8,14 +8,14 @@
 
 // DS3231 rtc(2, 3);
 SoftwareSerial mySerial(10, 11); //sim808 serial
-// DFRobot_SIM808 sim808(&mySerial);  //Connect RX,TX,PWR, 
+DFRobot_SIM808 sim808(&mySerial);  //Connect RX,TX,PWR, 
 SoftwareSerial obdSerial(0,1); // RX, TX obd
 const int chipSelect = 53;
 const int sensorPin = A0;  // analog input pin for the sensor
 
 
-#define PHONE_NUMBER1 "94769439154"
-#define PHONE_NUMBER2 "94713651522"
+#define PHONE_NUMBER1 "9923422402"
+#define PHONE_NUMBER2 "9923422402"
 #define MESSAGE_LENGTH 5
 #define ELM_PORT obdSerial
 const int threshold = 800;  // vibration threshold
@@ -41,7 +41,7 @@ int gx, gy, gz;
 
 void setup() {
   // rtc.begin();
-  // mySerial.begin(9600);
+  mySerial.begin(9600);
   Serial.begin(9600);
 
   //******** Initialize SD Card module *************
@@ -52,12 +52,12 @@ void setup() {
   // Serial.println("SD card initialized");
 
   //******** Initialize sim808 module *************
-  // while (!sim808.init()) {
-  //   delay(2000);
+  while (!sim808.init()) {
+    delay(2000);
 
-  //   Serial.print("Sim808 init error\r\n");
-  // }
-  // Serial.println("Sim808 init success");
+    Serial.print("Sim808 init error\r\n");
+  }
+  Serial.println("Sim808 init success");
 
   //******** Set Date and Time *************
   // rtc.setDate(16, 6, 2023);
@@ -108,7 +108,7 @@ void gyro(){
   Serial.print("X = "); Serial.print(gx);
   Serial.print(", Y = "); Serial.print(gy);
   Serial.print(", Z = "); Serial.println(gz);
-  delay(2000);
+  delay(100);
   
 }
 
