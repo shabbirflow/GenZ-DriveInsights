@@ -17,13 +17,13 @@ function NavBar() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Nav.Link className="button" href="/">
+            {/* <Nav.Link className="button" href="/">
               Logs
-            </Nav.Link>
+            </Nav.Link> */}
 
-            <Nav.Link className="button" href="/map">
+            {/* <Nav.Link className="button" href="/map">
               Map
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="button" href="/charts">
               Charts
             </Nav.Link>

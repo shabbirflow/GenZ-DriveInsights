@@ -19,7 +19,7 @@ const Home = () => {
     const fetchData = async () => {
       setLoading(true);
       const response = await axios.get(
-        "https://api.thingspeak.com/channels/2024270/feeds.json?results=200"
+        "https://api.thingspeak.com/channels/2495559/feeds.json?results=200"
       );
       setData(response.data.feeds.slice().reverse());
       setLoading(false);
@@ -31,7 +31,7 @@ const Home = () => {
     const interval = setInterval(() => {
       const fetchData = async () => {
         const response = await axios.get(
-          "https://api.thingspeak.com/channels/2024270/feeds.json?results=200"
+          "https://api.thingspeak.com/channels/2495559/feeds.json?results=200"
         );
         setData(response.data.feeds.slice().reverse());
       };
@@ -59,16 +59,10 @@ const Home = () => {
               </th>
 
               <th style={{ textAlign: "center" }} className="tableTh">
-                Speed(km/h)
+                Temperature
               </th>
               <th style={{ textAlign: "center" }} className="tableTh">
-                Vibration
-              </th>
-              <th style={{ textAlign: "center" }} className="tableTh">
-                RPM
-              </th>
-              <th style={{ textAlign: "center" }} className="tableTh">
-                Fuel Level
+                Relative Speed
               </th>
             </tr>
           </thead>
@@ -87,10 +81,8 @@ const Home = () => {
 
                 <td className="tableTd">{convertToIST(item.created_at)}</td>
 
-                <td className="tableTd">{item.field5}</td>
-                <td className="tableTd">{item.field6}</td>
-                <td className="tableTd">{item.field7}</td>
-                <td className="tableTd">{item.field8}</td>
+                <td className="tableTd">{item.field3}</td>
+                <td className="tableTd">{item.field4}</td>
               </tr>
             ))}
           </tbody>
