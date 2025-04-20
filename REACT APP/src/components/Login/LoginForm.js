@@ -10,11 +10,9 @@ import { getAuth, signInWithEmailAndPassword  } from "firebase/auth";
 
 import {
   Button,
-  Form,
   FormGroup,
   Label,
   Input,
-  Card,
   CardImg,
 } from "reactstrap";
 
@@ -36,7 +34,7 @@ function LoginForm() {
     }catch (error) {
       setDisplayError("Wrong password or email");
     }
-  }, []);
+  }, [email, password]);
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {

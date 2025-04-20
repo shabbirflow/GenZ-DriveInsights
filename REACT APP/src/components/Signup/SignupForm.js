@@ -10,11 +10,9 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import {
   Button,
-  Form,
   FormGroup,
   Label,
   Input,
-  Card,
   CardImg,
 } from "reactstrap";
 
@@ -42,7 +40,7 @@ function SignupForm() {
     } catch (error) {
       setDisplayError(JSON.stringify(error["message"]));
     }
-  }, []);
+  }, [email, password]);
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
