@@ -40,7 +40,7 @@ function SignupForm() {
     } catch (error) {
       setDisplayError(JSON.stringify(error["message"]));
     }
-  }, [email, password, navigate]);
+  });
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {

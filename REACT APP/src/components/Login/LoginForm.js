@@ -34,7 +34,7 @@ function LoginForm() {
     }catch (error) {
       setDisplayError("Wrong password or email");
     }
-  }, [email, password]);
+  });
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
