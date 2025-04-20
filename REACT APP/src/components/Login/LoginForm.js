@@ -53,7 +53,7 @@ function LoginForm() {
               style={{ textAlign: "center" }}
               className="col left-background "
             >
-              <img className="brandLogo" src={require("../NavBar/brand.jpg")} />
+              <img className="brandLogo" src={require("../NavBar/brand.jpg")} alt="logo"/>
               <h2>GenZ DriveInsights</h2>
               <p>Everything Records here!</p>
               <CardImg
@@ -89,7 +89,7 @@ function LoginForm() {
                 <Button className="mt-3  btn">Login</Button>
 
                 <div style={{ textAlign: "center", marginTop: "2vh" }}>
-                  <a className="mt-3 " href="#" onClick={navigateToSignup}>
+                  <a className="mt-3 " href="/dashboard" onClick={navigateToSignup}>
                     Create an account
                   </a>
                 </div>

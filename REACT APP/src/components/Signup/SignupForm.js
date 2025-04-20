@@ -40,7 +40,7 @@ function SignupForm() {
     } catch (error) {
       setDisplayError(JSON.stringify(error["message"]));
     }
-  }, [email, password]);
+  }, [email, password, navigate]);
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
@@ -59,7 +59,7 @@ function SignupForm() {
               style={{ textAlign: "center" }}
               className="col left-background "
             >
-              <img className="brandLogo" src={require("../NavBar/brand.jpg")} />
+              <img className="brandLogo" src={require("../NavBar/brand.jpg")} alt="logo" />
               <h2>GenZ DriveInsights</h2>
              
                
@@ -98,7 +98,7 @@ function SignupForm() {
                 <Button className="mt-3  btn">Sign up</Button>
 
                 <div style={{ textAlign: "center", marginTop: "2vh" }}>
-                  <a className="mt-3 " href="#" onClick={navigateToLogin}>
+                  <a className="mt-3 " href="/dashboard" onClick={navigateToLogin}>
                     Already have an account
                   </a>
                 </div>
