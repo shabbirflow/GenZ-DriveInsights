@@ -98,7 +98,7 @@ function SignupForm() {
                 <Button className="mt-3  btn">Sign up</Button>
 
                 <div style={{ textAlign: "center", marginTop: "2vh" }}>
-                  <a className="mt-3 " href="/dashboard" onClick={navigateToLogin}>
+                  <a className="mt-3 " href="#" onClick={navigateToLogin}>
                     Already have an account
                   </a>
                 </div>

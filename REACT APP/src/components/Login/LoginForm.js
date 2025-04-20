@@ -89,7 +89,7 @@ function LoginForm() {
                 <Button className="mt-3  btn">Login</Button>
 
                 <div style={{ textAlign: "center", marginTop: "2vh" }}>
-                  <a className="mt-3 " href="/dashboard" onClick={navigateToSignup}>
+                  <a className="mt-3 " href="#" onClick={navigateToSignup}>
                     Create an account
                   </a>
                 </div>

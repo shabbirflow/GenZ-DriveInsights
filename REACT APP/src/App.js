@@ -10,6 +10,7 @@ import Map from "./components/Map/Map";
 import ChartComponent from "./components/Charts/Charts";
 
 const App = () => {
+  console.log("App reached");
   return (
     <AuthProvider> 
       <BrowserRouter>
