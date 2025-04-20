@@ -17,8 +17,8 @@ const Charts = () => {
       <h1>Vehicle Information Graphs</h1>
       <div className="charts-wrapper">
         <div className="charts-container">
-          <ChartComponent chartUrl="https://thingspeak.com/channels/2506011/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" />
-          <ChartComponent chartUrl="https://thingspeak.com/channels/2506011/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&xaxis=time&yaxis=temp" />
+          <ChartComponent chartUrl="https://thingspeak.com/channels/2495559/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" />
+          <ChartComponent chartUrl="https://thingspeak.com/channels/2495559/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&xaxis=time&yaxis=temp" />
         </div>
       </div>
     </div>
