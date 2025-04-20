@@ -19,7 +19,7 @@ const Home = () => {
     const fetchData = async () => {
       setLoading(true);
       const response = await axios.get(
-        "https://api.thingspeak.com/channels/2495559/feeds.json?results=200"
+        "https://api.thingspeak.com/channels/250611/feeds.json?results=200"
       );
       setData(response.data.feeds.slice().reverse());
       setLoading(false);
