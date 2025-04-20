@@ -19,7 +19,7 @@ const Home = () => {
     const fetchData = async () => {
       setLoading(true);
       const response = await axios.get(
-        "https://api.thingspeak.com/channels/2506011/feeds.json?results=200"
+        "https://api.thingspeak.com/channels/2495559/feeds.json?results=200"
       );
       setData(response.data.feeds.slice().reverse());
       setLoading(false);
@@ -31,7 +31,7 @@ const Home = () => {
     const interval = setInterval(() => {
       const fetchData = async () => {
         const response = await axios.get(
-          "https://api.thingspeak.com/channels/2506011/feeds.json?results=200"
+          "https://api.thingspeak.com/channels/2495559/feeds.json?results=200"
         );
         setData(response.data.feeds.slice().reverse());
       };
