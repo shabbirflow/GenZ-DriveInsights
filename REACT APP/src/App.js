@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
@@ -12,16 +12,21 @@ import ChartComponent from "./components/Charts/Charts";
 const App = () => {
   console.log("App reached");
   return (
-    <AuthProvider> 
+    <AuthProvider>
       <BrowserRouter>
-        <PrivateRoute exact path="/" component={Home} />
-        <PrivateRoute exact path="/map" component={Map} />
-        <PrivateRoute exact path="/charts" component={ChartComponent} />
-        <Route exact path="/login" component={LoginForm} />
-        <Route exact path="/signup" component={SignupForm} />
+        <Switch>
+          <PrivateRoute exact path="/" component={Home} />
+          <PrivateRoute exact path="/map" component={Map} />
+          <PrivateRoute exact path="/charts" component={ChartComponent} />
+          <Route exact path="/login" component={LoginForm} />
+          <Route exact path="/signup" component={SignupForm} />
+          {/* Optional: Add a fallback route for 404 */}
+          <Route path="*">
+            <h1>404 - Not Found</h1>
+          </Route>
+        </Switch>
       </BrowserRouter>
-      </AuthProvider>
-    
+    </AuthProvider>
   );
 };
 
