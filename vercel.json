@@ -1,6 +1,6 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
-  }
-  
+  "root": "react-app",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
