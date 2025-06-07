@@ -7,7 +7,7 @@ import PrivateRoute from "./PrivateRoute";
 import LoginForm from "./components/Login/LoginForm";
 import SignupForm from "./components/Signup/SignupForm";
 import Map from "./components/Map/Map";
-import ChartComponent from "./components/Charts/Charts";
+import Charts from "./components/Charts/Charts";
 
 const App = () => {
   console.log("App reached");
@@ -17,7 +17,7 @@ const App = () => {
         <Switch>
           <PrivateRoute exact path="/" component={Home} />
           <PrivateRoute exact path="/map" component={Map} />
-          <PrivateRoute exact path="/charts" component={ChartComponent} />
+          <PrivateRoute exact path="/charts" component={Charts} />
           <Route exact path="/login" component={LoginForm} />
           <Route exact path="/signup" component={SignupForm} />
           {/* Optional: Add a fallback route for 404 */}
